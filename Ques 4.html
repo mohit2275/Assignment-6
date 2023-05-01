@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ques 4</title>
+    <style>
+        * {
+            font-family: cursive;
+            transition: .2s;
+        }
+
+        body {
+            background-color: rgb(102, 100, 100);
+        }
+
+        .main {
+            height: fit-content;
+            width: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            background-color: darkcyan;
+            color: white;
+            position: absolute;
+            top: 25%;
+            left: 30%;
+            box-shadow: 0px 0px 15px white;
+            padding: 20px 0px;
+        }
+
+        .main button {
+            padding: 5px 9px;
+            background-color: transparent;
+            border: 2px solid;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px 0px;
+            width: 26%;
+        }
+
+        .btns {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 0px 40px;
+        }
+
+        #counter {
+            border: 2px black solid;
+            border-radius: 5px;
+            padding: 0px 25px;
+            text-align: center;
+        }
+
+        .main button:hover {
+            background-color: white;
+            color: darkcyan;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="main">
+        <h2>The number of students are -</h2>
+        <h2 id="counter">0</h2>
+
+        <div class="btns">
+            <button type="button" onclick="add()">ADD +</button>
+            <button type="button" onclick="minus()">MINUS -</button>
+            <button type="button" onclick="reset()">RESET</button>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        let value = document.getElementById('counter');
+
+        let count = 0;
+
+        function add() {
+            count++;
+            value.innerText = count;
+        }
+
+        function minus() {
+            if (count > 0) {
+                count--;
+                value.innerText = count;
+            }
+        }
+
+        function reset() {
+            count = 0;
+            value.innerText = count;
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
